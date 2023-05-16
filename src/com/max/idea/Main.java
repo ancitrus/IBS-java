@@ -2,6 +2,7 @@ package com.max.idea;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        double a = -7.4657;
+        byte b = 127;
     }
 }

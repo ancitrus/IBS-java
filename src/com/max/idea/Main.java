@@ -1,6 +1,7 @@
 package com.max.idea;
 
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         double num1;
@@ -13,16 +14,25 @@ public class Main {
         num2 = reader.nextDouble();
         System.out.print("\nВведите один из символов ‘+’, ‘-’, ‘*’ или ‘/’ : ");
         operator = reader.next().charAt(0);
-        switch(operator) {
-            case '+': answer = num1 + num2;
+        switch (operator) {
+            case '+':
+                answer = num1 + num2;
                 break;
-            case '-': answer = num1 - num2;
+            case '-':
+                answer = num1 - num2;
                 break;
-            case '*': answer = num1 * num2;
+            case '*':
+                answer = num1 * num2;
                 break;
-            case '/': answer = num1 / num2;
+            case '/':
+                if (num2 == 0) {
+                    System.out.println("На ноль делить нельзя!");
+                    return;
+                }
+                answer = num1 / num2;
                 break;
-            default:  System.out.print("Введите корректный оператор!");
+            default:
+                System.out.print("Введите корректный оператор!");
                 return;
         }
         System.out.print("\nРезультат выполнения соответствующей арифметической операции:\n");
